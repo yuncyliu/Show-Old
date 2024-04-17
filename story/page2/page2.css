@@ -1,0 +1,338 @@
+/* 消除默认属性 */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 设置背景图和消除盒子默认属性 */
+body {
+    background-image: url(./source/1.背景.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    animation: fadeInAnimation ease 2s ;
+    animation-iteration-count: 1; 
+    /* animation-fill-mode: forwards; 
+} 
+  
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     }  */
+}
+
+.header {
+    background-color: #29323c;
+}
+
+.brand {
+    display: flex;
+    padding: 10px;
+    margin: 0 90px;
+}
+
+.brand h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span {
+    color: crimson;
+}
+
+/* 侧边导航栏内容块 */
+.nav {
+    width: 120px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: -150px;
+    top: 150px;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/* 侧边栏伸缩块位置 */
+#cb:checked ~ .nav {
+    left: 0;
+}
+
+/* 侧边栏小内容大小设置 */
+.nav li {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 侧边栏内容悬停效果 */
+.nav a:hover {
+    background-color: rgba(31, 30, 30, 0.7);
+}
+
+/* 侧边栏内容文字颜色 */
+.nav a {
+    color: aliceblue;
+    display: block;
+}
+
+/* 侧边栏伸缩块格式设置 */
+#cb {
+    display: none;
+}
+
+/* 侧边栏伸缩块形状大小属性设置 */
+label {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(153, 147, 147, 0.8);
+    border-radius: 40px;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    left: 40px;
+    top: 110px;
+    cursor: pointer;
+}
+
+/* 大卡片大小设置 */
+.box {
+    width: 1200px;
+    background-color: rgba(242, 232, 232, 0.7);
+    margin: 70px auto;
+    border-radius: 50px;
+    padding: 10px 0;
+}
+
+/* 上方标题设置 */
+.box h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 上方说明文字设置 */
+.box .introduce {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.head {
+    margin-top: 100px;
+    margin: 0 auto;
+    display: flex;
+    height: 100px;
+    width: 500px;
+    /* background-color: #fff; */
+    text-align: center;
+    justify-content: center;
+}
+
+.head h2 {
+    /* text-align: center; */
+    margin: 0 auto;
+    line-height: 100px;
+}
+
+.head img {
+    height: 100px;
+    width: 100px;
+}
+
+.body1 {
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.text {
+    align-self: center;
+}
+
+.text p {
+    font-size: 17px;
+    font-weight: 500;
+    text-indent: 2em;
+    margin-bottom: 10px;
+}
+
+.body1 img {
+    float: left;
+    shape-outside: url(./source/日历.png);
+    transform: translateX(-2rem);
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.body2 {
+    width: 75%;
+    display: flex;
+    margin: 50px auto;
+}
+
+.body2 img {
+    float: right;
+    shape-outside: url(./source/使用手机.png);
+    transform: translateX(2rem);
+    width: 200px;
+    height: 200px;
+}
+
+.body3 {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.body3 img {
+    float: left;
+    shape-outside: url(./source/4.洗衣服.png);
+    margin: 0 2rem;
+    transform: translateX(2rem);
+    width: 200px;
+    height: 200px;
+}
+
+.body3 img:nth-child(2) {
+    float: right;
+    shape-outside: url(./source/4.晾晒衣服.png);
+    transform: translateX(-2rem);
+}
+
+.body4 .text p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.body5 {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.body5 img {
+    float: right;
+    shape-outside: url(./source/6.等公交.png);
+    transform: translateX(2rem);
+    width: 200px;
+    height: 200px;
+}
+
+.body6 {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.body6 img {
+    float: left;
+    shape-outside: url(./source/刷公交.png);
+    margin: 0 2rem;
+    transform: translateX(2rem);
+    width: 200px;
+    height: 200px;
+}
+
+.body7 {
+    width: 60%;
+    display: flex;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+.body7 img {
+    float: right;
+    shape-outside: url(./source/买菜.png);
+    margin: 0 2rem;
+    transform: translateX(-2rem);
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.body8 {
+    width: 80%;
+    display: flex;
+    margin-left: 100px;
+}
+
+.body8 img {
+    float: left;
+    shape-outside: url(./source/8.吃饭.png);
+    /* margin: 0 2rem; */
+    transform: translateX(-2rem);
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.body9 {
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.body9 img{
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+    /* animation: rotate 5s infinite linear alternate; */
+    box-shadow: 0 0 50px rgba(200, 193, 193, 0.7);
+}
+
+/* @keyframes rotate {
+    from {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+    
+} */
+
+.body10 {
+    width: 60%;
+    display: flex;
+    margin-left: 300px;
+}
+
+.body10 img {
+    float: right;
+    shape-outside: url(./source/9.看电视2.png);
+    margin: 0 2rem;
+    transform: translateX(-2rem);
+    width: 200px;
+    height: 200px;
+}
+
+.body11 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.body11 .text p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
