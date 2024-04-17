@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数据可视化</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+  <!-- 头部的盒子 -->
+  <header>
+    <a href="../menu/main-menu.html" class="logo">
+      <h1><span>归 · 留</span> show old</h1>
+    </a>
+    <ul>
+      <li><a href="#" style="color: crimson;">基础数据</a></li>
+      <li><a href="./social.html">社交</a></li>
+      <li><a href="./health.html">健康</a></li>
+      <li><a href="./eco.html">经济</a></li>
+      <li><a href="./lives.html">数字鸿沟</a></li>
+    </ul>
+  </header>
+
+  <!-- 页面主体部分 -->
+  <section class="mainbox">
+    <div class="column">
+      <div class="panel bar">
+        <h2>中国老年人数的变化情况</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel line">
+        <h2>
+          我国居民平均寿命
+        </h2>
+        <div class="chart">图表</div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel pie2">
+        <h2>第七次人口普查不同年龄占比</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="column">
+      <!-- no模块制作 -->
+      <div class="no">
+        <div class="no-hd">
+          <h2>2010年与2020年各省份老年群体指标</h2>
+        </div>
+        <div class="no-bd" id="controls">
+          <ul>
+            <li><button id="year2010">2010年</button></li>
+            <li><button id="population">60岁及以上人口数</button></li>
+
+          </ul>
+          <ul>
+            <li><button id="year2020">2020年</button></li>
+            <li><button id="supportRatio">老年抚养比</button></li>
+          </ul>
+        </div>
+      </div>
+      <!-- 地图模块 -->
+      <div class="map">
+        <div class="chart"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="panel1 bar2">
+        <h2>2010-2022各省份抚养比变化(抽样数据)</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel1 pie">
+        <h2>65+各年龄段人口占比</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+
+    </div>
+  </section>
+  <script src="js/flexible.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <!-- 先引入jquery -->
+  <script src="js/jquery.js"></script>
+  <!-- 必须先引入china.js 这个文件 因为中国地图需要 -->
+  <script src="js/china.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>s
