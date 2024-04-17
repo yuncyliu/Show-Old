@@ -1,0 +1,249 @@
+/* 消除默认属性 */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 设置背景图和消除盒子默认属性 */
+body {
+    background-image: url(./source/1.背景（无白边）.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #29323c;
+}
+
+.brand {
+    display: flex;
+    padding: 10px;
+    margin: 0 90px;
+}
+
+.brand h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span {
+    color: crimson;
+}
+
+/* 侧边导航栏内容块 */
+.nav {
+    width: 120px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: -150px;
+    top: 150px;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/* 侧边栏伸缩块位置 */
+#cb:checked ~ .nav {
+    left: 0;
+}
+
+/* 侧边栏小内容大小设置 */
+.nav li {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* 侧边栏内容悬停效果 */
+.nav a:hover {
+    background-color: rgba(31, 30, 30, 0.7);
+}
+
+/* 侧边栏内容文字颜色 */
+.nav a {
+    color: aliceblue;
+    display: block;
+}
+
+/* 侧边栏伸缩块格式设置 */
+#cb {
+    display: none;
+}
+
+/* 侧边栏伸缩块形状大小属性设置 */
+label {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(153, 147, 147, 0.8);
+    border-radius: 40px;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+    left: 40px;
+    top: 110px;
+    cursor: pointer;
+}
+
+/* 大卡片大小设置 */
+.box {
+    width: 1200px;
+    /* height: 1500px; */
+    background-color: rgba(242, 232, 232, 0.7);
+    margin: 70px auto;
+    border-radius: 50px;
+    padding: 10px 0;
+    /* animation: bounceInLeft 1s  cubic-bezier(0.215, 0.610, 0.355, 1.000)
+}
+
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  100% {
+    transform: none;
+  } */
+}
+
+/* 上方标题设置 */
+.box h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 上方说明文字设置 */
+.box .introduce {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.center {
+    display: flex;
+    width: 80%;
+    height: 520px;
+    margin: 50px auto;
+    border-top: 3px dashed #000;
+}
+
+.center .text li {
+    margin-top: 10px;
+    border-bottom: 1px dashed gray;
+}
+
+.center .text li:nth-child(8) {
+    border-bottom: 3px dashed #000;
+}
+
+.center img {
+    float: right;
+    shape-outside: url(./source/轮椅.png);
+}
+
+.container{
+    position: relative;
+    /* height: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+.container .card{
+    margin-top: 100px;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: rgb(237, 232, 232);
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: .3s ease-in-out;
+    border-radius: 20px;
+    /* border: 1px solid gray; */
+}
+
+.container .card:hover{
+    height: 550px;
+}
+
+.container .card .picture{
+    position: relative;
+    width: 310px;
+    height: 250px;
+    top: -60px;
+    left: -5px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+.container .card .picture img{
+    max-width: 100%;
+    border-radius: 4px;
+    width: 390px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.container .card .zzz{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.container .card:hover .zzz{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: .3s;
+}
+
+#查看更多{
+    margin-top: 20px;
+}
+
+#查看更多 a{
+    font-size: 15px;
+    color: cadetblue;
+}
+
+#查看更多 a:hover{
+    color: rgb(222, 190, 6);
+}
+
+.add {
+    font-size: 10px;
+    color: rgb(23, 109, 109);
+}
