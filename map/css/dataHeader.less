@@ -1,0 +1,112 @@
+// css 初始化
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  /* 声明字体*/
+  @font-face {
+    font-family: electronicFont;
+    src: url(../font/DS-DIGIT.TTF);
+  }
+  
+  body {
+    background-color: #485563;
+   
+    line-height: 1.15;
+  }
+  
+  header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.25rem;
+    background: #485563;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .logo {
+      position: relative;
+      text-decoration: none;
+      h1{
+        font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+    span{
+      color: crimson;
+    }
+      }
+    }
+  
+    ul {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      li {
+        position: relative;
+        list-style: none;
+  
+        a {
+          position: relative;
+          display: block;
+          padding: 10px 20px;
+          margin: 20px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: bold;
+          transition: .5s;
+  
+          &:hover{
+            color: crimson;
+          }
+  
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 1px solid #ee0e0ed8;
+            border-bottom: 1px solid #e31a1a;
+            transform: scaleY(1.5);
+            opacity: 0;
+            transition: .5s;
+            z-index: -1;
+          }
+  
+          &:hover:before {
+            transform: scaleY(1);
+            opacity: 1;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ed2c2c;
+            transform: scale(0);
+            transition: .5s;
+            z-index: -1;
+          }
+  
+          &:hover:after {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
